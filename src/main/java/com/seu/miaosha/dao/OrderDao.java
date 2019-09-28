@@ -1,10 +1,6 @@
 package com.seu.miaosha.dao;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectKey;
+import org.apache.ibatis.annotations.*;
 
 import com.seu.miaosha.domain.MiaoshaOrder;
 import com.seu.miaosha.domain.OrderInfo;
@@ -25,5 +21,10 @@ public interface OrderDao {
 	@Select("select * from order_info where id = #{orderId}")
 	OrderInfo getOrderById(@Param("orderId")long orderId);
 
+	@Delete("delete from order_info")
+	void deleteOrders();
+
+	@Delete("delete from miaosha_order")
+	void deleteMiaoshaOrders();
 	
 }

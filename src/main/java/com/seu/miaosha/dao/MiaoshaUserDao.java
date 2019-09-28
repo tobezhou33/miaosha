@@ -14,7 +14,7 @@ public interface MiaoshaUserDao {
 	MiaoshaUser getById(@Param("id") long id);
 
 	@Update("update miaosha_user set password = #{password} where id = #{id}")
-	public void update(MiaoshaUser toBeUpdate);
+	void update(MiaoshaUser toBeUpdate);
 
 
 }
