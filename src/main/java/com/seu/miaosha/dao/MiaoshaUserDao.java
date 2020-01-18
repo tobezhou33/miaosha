@@ -16,5 +16,4 @@ public interface MiaoshaUserDao {
 	@Update("update miaosha_user set password = #{password} where id = #{id}")
 	void update(MiaoshaUser toBeUpdate);
 
-
 }

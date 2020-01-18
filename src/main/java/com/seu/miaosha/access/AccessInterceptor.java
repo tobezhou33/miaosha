@@ -99,5 +99,4 @@ public class AccessInterceptor  extends HandlerInterceptorAdapter{
 		}
 		return null;
 	}
-	
 }

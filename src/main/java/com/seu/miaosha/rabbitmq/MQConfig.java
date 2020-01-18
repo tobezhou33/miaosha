@@ -91,6 +91,4 @@ public class MQConfig {
 		map.put("header2", "value2");
 		return BindingBuilder.bind(headerQueue1()).to(headersExchage()).whereAll(map).match();
 	}
-	
-	
 }
